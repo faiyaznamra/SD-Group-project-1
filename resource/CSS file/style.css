@@ -1,29 +1,34 @@
-/*CUSTOM PROPERTY*/
+/*------------------
+CUSTOM PROPERTY
+--------------------*/
     /**
-    *colour
+     #Colour
     */
+    
+
 :root {
 
   /**
-   * colors
-   */
+   #Colors
+  */
 
   --chinese-violet_30: hsla(304, 14%, 46%, 0.3);
   --chinese-violet: hsl(304, 14%, 46%);
   --sonic-silver: hsl(208, 7%, 46%);
-  --old-rose_30: hsla(357, 37%, 62%, 0.3);
+  --dark-cyan: #65B1B1;
   --ghost-white: hsl(233, 33%, 95%);
   --light-pink: hsl(357, 93%, 84%);
   --light-gray: hsl(0, 0%, 80%);
-  --old-rose: hsl(357, 37%, 62%);
   --seashell: hsl(20, 43%, 93%);
   --charcoal: hsl(203, 30%, 26%);
   --white: hsl(0, 0%, 100%);
+  --light-teal: #B1D8D7;
+
 
   /**
-   * typography
-   */
-
+   #Typography
+  */
+ 
   --ff-philosopher: 'Philosopher', sans-serif;
   --ff-poppins: 'Poppins', sans-serif;
 
@@ -40,37 +45,49 @@
 
 Maintainability: Change fonts/sizes in one place instead of hunting through CSS.*/
 
+
+
 /**
-   * spacing
-   */
+  #spacing
+*/
 
   --section-padding: 80px;
 
+
+
   /**
-   * shadow
+   #shadow
    */
 
   --shadow-1: 4px 6px 10px hsla(231, 94%, 7%, 0.06);
   --shadow-2: 2px 0 15px 5px hsla(231, 94%, 7%, 0.06);
   --shadow-3: 3px 3px var(--chinese-violet);
   --shadow-4: 5px 5px var(--chinese-violet); /* shadow effect*/
+ 
+
 
   /**
-   * radius
+   #Radius
    */
 
   --radius-5: 5px; /*Small rounded corners*/
   --radius-10: 10px; /*Larger rounded corners*/
 
-  /**
-   * clip path এই --polygon ভেরিয়েবলটি একটি ক্লিপ-পাথ (clip-path) ডিফাইন করে, যা দিয়ে আপনি যেকোন HTML এলিমেন্টকে একটি কাস্টম আকৃতি দিতে পারবেন। এখানে polygon() ফাংশনের মধ্যে যে কোর্ডিনেটস দেওয়া হয়েছে, সেগুলো দিয়ে একটি অনিয়মিত চতুর্ভুজ (irregular quadrilateral) আকৃতি তৈরি হয়েছে।
-   */
+
+
+
+  /*
+   #clip path এই --polygon ভেরিয়েবলটি একটি ক্লিপ-পাথ (clip-path) ডিফাইন করে, যা দিয়ে আপনি যেকোন HTML এলিমেন্টকে একটি কাস্টম আকৃতি দিতে পারবেন। এখানে polygon() ফাংশনের মধ্যে যে কোর্ডিনেটস দেওয়া হয়েছে, সেগুলো দিয়ে একটি অনিয়মিত চতুর্ভুজ (irregular quadrilateral) আকৃতি তৈরি হয়েছে।
+  */
 
   --polygon: polygon(100% 29%,100% 100%,19% 99%,0 56%);
 
-  /**
-   * transition  -->This CSS code defines transition timing variables for smooth animations:
-   */
+
+
+
+  /*
+   #Transition  -->This CSS code defines transition timing variables for smooth animations:
+  */
 
   --transition-1: 0.25s ease;/*Quick transition (0.25s) with standard easing*/
   --transition-2: 0.5s ease;/*Slower transition (0.5s) with standard easing*/
@@ -78,9 +95,11 @@ Maintainability: Change fonts/sizes in one place instead of hunting through CSS.
 
 }
 
-/*
-*RESET
-*/
+
+
+/*----------------
+#RESET
+------------------*/
 
 *,
 *::before,
@@ -123,7 +142,7 @@ button { cursor: pointer; } /*বাটনে হোভার করলে হ�
 
 address { font-style: normal; } /*এড্রেস ট্যাগের ইটালিক স্টাইল সরিয়ে নর্মাল করে।*/
 
-/* ion-icon { pointer-events: none; } /*আইকনে ক্লিক করলে কোনো ইভেন্ট ট্রিগার হবে না (পেছনের এলিমেন্টে ক্লিক যাবে)। */
+ion-icon { pointer-events: none; } /*আইকনে ক্লিক করলে কোনো ইভেন্ট ট্রিগার হবে না (পেছনের এলিমেন্টে ক্লিক যাবে)। */
 
 html {
   font-family: var(--ff-poppins);
@@ -141,7 +160,7 @@ body {
 :focus-visible { outline-offset: 4px; } /*Adds space around focus rings*/
 
 ::selection {
-  background-color: var(--old-rose);
+  background-color: var(--light-teal-selection);
   color: var(--white);
 } /*Custom text selection colors*/
 
@@ -154,3 +173,212 @@ body {
 ::-webkit-scrollbar-thumb:hover { background-color: hsl(0, 0%, 70%); }/*Customizes scrollbar appearance*/
 
 
+/*--------------
+ #Reused Style
+-----------------*/
+.container { padding-inline: 15px; }
+
+.section { padding-block: var(--section-padding); }
+
+.section:nth-child(odd) { background-color: var(--seashell); }
+
+.section-subtitle {
+  color: var(--light-teal-selection);
+  text-transform: uppercase;
+  font-weight: var(--fw-700);
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.h1,
+.h2,
+.h3,
+.tab-text {
+  color: var(--charcoal);
+  font-family: var(--ff-philosopher);
+  line-height: 1.2;
+}
+
+.h1 { font-size: var(--fs-2); }
+
+.h2 { font-size: var(--fs-3); }
+
+.h3 { font-size: var(--fs-5); }
+
+.section-text { font-size: var(--fs-7); }
+
+.w-100 { width: 100%; }
+
+.has-before,
+.has-after {
+  position: relative;
+  z-index: 1;
+}
+
+.has-before::before,
+.has-after::after {
+  content: "";
+  position: absolute;
+}
+
+.section-title { text-align: center; }
+
+.grid-list {
+  display: grid;
+  gap: 25px;
+}
+
+.btn-link {
+  color: var(--light-teal-selection);
+  font-weight: var(--fw-500);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: var(--transition-1);
+}
+
+.btn-link:is(:hover, :focus) { color: var(--chinese-violet); }
+
+.has-underline {
+  position: relative;
+  margin-block-end: 60px;
+}
+
+.has-underline .span {
+  height: 2px;
+  background-color: var(--dark-cyan);
+  width: 200px;
+  margin-inline: auto;
+  margin-block-start: 30px;
+}
+
+.has-underline .has-before::before {
+  width: 18px;
+  height: 18px;
+  top: 2px;
+  left: 45%;
+  transform: translateY(-50%) rotate(45deg);
+  background-color: var(--dark-cyan);
+  box-shadow: 7px -7px var(--dark-cyan);
+}
+
+.btn {
+  padding: 12px 30px;
+  transition: var(--transition-1);
+}
+
+.btn-primary {
+  background-color: var(--light-teal-selection);
+  color: var(--white);
+}
+
+.btn-primary:is(:hover, :focus) { background-color: var(--chinese-violet); }
+
+.btn-secondary {
+  border: 1px solid var(--light-teal-selection);
+  color: var(--light-teal-selection);
+}
+
+.btn-secondary:is(:hover, :focus) {
+  background-color: var(--light-teal-selection);
+  color: var(--white);
+}
+
+.img-holder {
+  aspect-ratio: var(--width) / var(--height);
+  background-color: var(--light-gray);
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*------------
+ #Hedaer
+--------------*/
+
+.navbar { display: none; }
+.header {
+  background-color: var(--white);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  left: 10px;
+  padding-block: 12px;
+  z-index: 4;
+  transition: var(--transition-2);
+}
+
+.header.active {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  filter: drop-shadow(var(--shadow-1));
+  transform: translateY(-100%);
+  transition: none;
+  animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+  0% { transform: translateY(-100%);}
+  100% { transform: translateY(0);}
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--ff-philosopher);
+  font-size: 4rem;
+  color: var(--charcoal);
+  line-height: 1;
+}
+
+.nav-toggle-btn {
+  font-size: 40px;
+  color: var(--charcoal);
+}
+
+.nav-toggle-btn ion-icon { --ionicon-stroke-width: 20px }
+
+.nav-toggle-btn.active .open
+.nav-toggle-btn .close { display: none; }
+
+.nav-toggle-btn .open,
+.nav-toggle-btn.active .close { display: block;}
+
+.navbar {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--white);
+  padding-inline: 15px;
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: 0.2s var(--cubic-out);
+}
+
+.navbar.active {
+  max-height: 400px;
+  visibility: visible;
+  transition-duration: 0.5s;
+}
+
+.navbar-list { margin-block-end: 10px; }
+
+.navbar-link {
+  color: var(--charcoal);
+  padding-block: 8px;
+  line-height: 1.5;
+  transition: var(--transition-1);
+}
+
+.navbar-link:is(:hover, :focus) { color: var(--light-teal);}
