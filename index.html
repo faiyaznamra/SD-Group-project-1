@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> //X-UA-Compatible এইটা মোবাইল, পিসি, ট্যাব, প্রভ্রিতিতে Ratio ঠিক রাখে।
-    <meta name="viewport" content="width=device-width, initial-scale.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- X-UA-Compatible এইটা মোবাইল, পিসি, ট্যাব, প্রভ্রিতিতে Ratio ঠিক রাখে।-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
     <title>গ্রন্থকুটির - গ্রন্থকুটির হলো জ্ঞানের মন্দির,
@@ -12,8 +12,95 @@
 যেখানে বইয়ের পাতায় জ্বলে প্রজ্ঞার আলোকশিখা।">
 <meta name="description" content="গ্রন্থকুটির হলো নীরবতার মাঝে কথোপকথনের জায়গা,
 যেখানে বইগুলি তাদের গল্প বলে চিরকালের জন্য। - হুমায়ুন আহমেদ">
+
+
+<link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml"> <!--
+icon ব্যাবহারের জন্য এইটা
+Why Use SVG Favicons?
+✅ Tiny file size
+✅ Crisp at any resolution (vector)
+✅ Can be styled with CSS if inlined
+✅ Supports dark/light mode theming-->
+
+
+<link rel="stylesheet" href="./resource/CSS file/style.css"> <!--CSS file-->
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet"> <!-- এইখানে ২টা font আনা হইসে , crossorigin এই জিনিসটা কাজ এইভাবে করে 
+    Use crossorigin for external resources that enforce CORS (fonts, scripts, etc.).
+For fonts, it ensures they load correctly across all browsers -->
+
+
+
 </head>
 <body>
+
+
+  <!------------
+  #HEADER
+  -------------->
+<header class="header active" data-header>
+<div class="container">
+
+  <a href="#" class="logo">গ্রন্থকুটির</a>
+  
+  <nav class="navbar" data-navbar> <!--Navbar manu creation-->
+    <ul class="navbar-list">
+      
+      <li class="navbar-item">
+          <a href="#home" class="navbar-link">Home</a>
+      </li>
+      <li class="navbar-item">
+          <a href="#benefits" class="navbar-link">Benefits</a>
+       </li>   
+      <li class="navbar-item">
+          <a href="#chapters" class="navbar-link">Chapters</a>
+       </li>   
+      <li class="navbar-item">
+          <a href="#pricing" class="navbar-link">Pricing</a>
+       </li>   
+      <li class="navbar-item">
+          <a href="#author" class="navbar-link">Author</a>
+      </li>   
+      <li class="navbar-item">
+          <a href="#achievements" class="navbar-link">Achievements</a>
+      </li> 
+      <li class="navbar-item">
+          <a href="#contact" class="navbar-link">Contact</a>
+      </li>
+
+    </ul>
+  </nav>
+
+  <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+    <ion-icon name="menu-outline" aria-hidden="true" class="open"></ion-icon>
+
+    <ion-icon name="close-outline"aria-hidden="true" class="close"></ion-icon>
+  </button>
+
+</div>
+</header>
+
+<!------------
+JS link------->
+
+  <script src="./resource/java script/index.js" defer></script>
+<!-- defer Downloads script without blocking HTML parsing
+
+Executes after DOM is ready (in original order)
+
+Benefits:
+🚀 Faster page load (no render-blocking)
+🛡️ DOM-safe (guaranteed full HTML parsed)
+🔢 Order preserved (scripts run in written sequence)-->
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script><!-- iconicon যোগ করা হইসে-->
     
 </body>
 </html>
