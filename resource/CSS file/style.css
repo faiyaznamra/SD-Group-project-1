@@ -382,3 +382,195 @@ body {
 }
 
 .navbar-link:is(:hover, :focus) { color: var(--light-teal);}
+
+
+
+/*
+        - #FAIYAZ NAMRA----------FAIYAZ NAMRA----------FAIYAZ NAMRA
+        - #FAIYAZ NAMRA----------FAIYAZ NAMRA----------FAIYAZ NAMRA
+        - #FAIYAZ NAMRA----------FAIYAZ NAMRA----------FAIYAZ NAMRA
+        - #----START-----------------START-----------------START
+      -*/
+
+
+
+/*-----------------------------------
+  #BENEFITS
+-----------------------------------*/
+
+
+
+.benefits .section-text {
+  text-align: center;
+  margin-block: 8px 25px;
+}
+
+.benefits-card {
+  padding: 25px;
+  box-shadow: var(--shadow-2);
+  border-radius: var(--radius-5);
+  overflow: hidden;
+  transition: var(--transition-2);
+}
+
+.benefits-card::before,
+.benefits-card::after {
+  bottom: 0;
+  right: 0;
+  clip-path: var(--polygon);
+  transition: var(--transition-2);
+}
+
+.benefits-card::before {
+  width: 80px;
+  height: 80px;
+  background-color: var(--old-rose_30);
+  transform: translateY(60px);
+}
+
+.benefits-card::after {
+  width: 70px;
+  height: 70px;
+  background-color: var(--chinese-violet_30);
+  transform: translateY(65px);
+}
+
+.benefits-card:is(:hover, :focus-within) { transform: translateY(-10px); }
+
+.benefits-card:is(:hover, :focus-within)::before,
+.benefits-card:is(:hover, :focus-within)::after { transform: translateY(0); }
+
+.benefits-card:is(:hover, :focus-within)::after { transition-delay: 0.1s; }
+
+.benefits-card .card-icon {
+  background-color: var(--old-rose);
+  max-width: max-content;
+  padding: 10px;
+  box-shadow: var(--shadow-3);
+  transition: var(--transition-1);
+}
+
+.benefits-card:is(:hover, :focus) .card-icon { box-shadow: none; }
+
+.benefits-card .card-title { margin-block: 20px 15px; }
+
+.benefits-card .btn-link { margin-block-start: 15px; }
+
+
+
+/*-----------------------------------*\
+  #CHAPTERS
+\*-----------------------------------*/
+
+.chapter-card {
+  height: 100%;
+  background-color: var(--white);
+  padding: 25px;
+  border-radius: var(--radius-5);
+  box-shadow: var(--shadow-2);
+  transition: var(--transition-2);
+}
+
+.chapter-card:is(:hover, :focus-within) { transform: translateY(-10px); }
+
+.chapter-card .card-title { margin-block-end: 15px; }
+
+
+
+
+
+/*-----------------------------------*\
+  #PREVIEW
+\*-----------------------------------*/
+
+.tab-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tab-card {
+  position: relative;
+  height: 60px;
+  background-color: var(--seashell);
+  border-radius: var(--radius-10);
+  box-shadow: var(--shadow-3);
+  display: grid;
+  place-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: var(--transition-1);
+}
+
+.tab-card .w-100 {
+  pointer-events: none;
+  opacity: 0;
+  transition: var(--transition-2);
+}
+
+.tab-card.active .w-100 { opacity: 1; }
+
+.tab-card.active {
+  height: 40vh;
+  box-shadow: none;
+}
+
+.tab-text {
+  font-size: var(--fs-4);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tab-card.active .tab-text { display: none; }
+
+
+
+
+
+/*-----------------------------------*\
+  #PRICING
+\*-----------------------------------*/
+
+.pricing-card {
+  padding: 40px 50px;
+  background-color: var(--white);
+  text-align: center;
+  transition: var(--transition-2);
+}
+
+.pricing-card:is(:hover, :focus-within),
+.pricing-card.bundle { box-shadow: var(--shadow-4); }
+
+.pricing-card:is(:hover, :focus-within) { transform: translateY(-10px); }
+
+.pricing-card .price {
+  font-family: var(--ff-philosopher);
+  font-size: var(--fs-1);
+  color: var(--charcoal);
+  font-weight: var(--fw-700);
+  margin-block-start: 10px;
+}
+
+.pricing-card-list { margin-block: 20px 40px; }
+
+.pricing-card-list .card-item:not(:last-child) { border-block-end: 1px solid var(--ghost-white); }
+
+.pricing-card .card-text { padding-block: 10px; }
+
+.pricing-card .btn { margin-inline: auto; }
+
+
+/*
+        - #FAIYAZ NAMRA----------FAIYAZ NAMRA----------FAIYAZ NAMRA
+        - #FAIYAZ NAMRA----------FAIYAZ NAMRA----------FAIYAZ NAMRA
+        - #FAIYAZ NAMRA----------FAIYAZ NAMRA----------FAIYAZ NAMRA
+        - #-----END-------------------END-------------------END
+      -*/
+
+
+
+/*-----------------------------------*\
+  #AUTHOR
+\*-----------------------------------*/
