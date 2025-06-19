@@ -384,6 +384,61 @@ body {
 .navbar-link:is(:hover, :focus) { color: var(--light-teal);}
 
 
+/*------------
+ #Hero
+--------------*/
+.hero {
+  padding-block-start: calc(var(--section-padding)+60px);
+  text-align: center;
+}
+
+.hero .container {
+  display: grid;
+  gap: 60px;
+}
+
+.hero-banner{
+  padding-inline-end: 30px;
+  padding-block-end: 30px;
+  max-width: 420px;
+  margin-inline: auto;
+}
+
+.hero-banner .w-100 { border-radius: 10px 30px;}
+
+.hero-banner::before {
+  top: 30px;
+  right: 30px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--light-pink);
+  border-radius: var(--radius-10);
+  z-index: -1;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white);
+  color: var(--chinese-violet);
+  font-size: 22px;
+  padding: 24px;
+  border-radius: 50%;
+  transition: var(--transition-1);
+  animation: pulse 3s ease infinite;
+}
+
+.play-btn:is(:hover, :focus) { color: var(--light-teal);}
+
+@keyframes pulse {
+  0%,
+  50% { box-shadow: 0 0 0 0 hsla(0, 0%, 100%, 0.5);}
+
+  100% { box-shadow: 0 0 0 10px transparent;}
+}
+
 
 /*
         - #FAIYAZ NAMRA----------FAIYAZ NAMRA----------FAIYAZ NAMRA

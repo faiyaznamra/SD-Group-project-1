@@ -10,9 +10,9 @@
 
 
 
-/**
- * add event on element
- */
+/**--------------------
+ #add event on element
+-----------------------*/
 
 const addEventOnelem = function (elem, type, callback) {
   if (elem.length > 1) {
@@ -26,9 +26,9 @@ const addEventOnelem = function (elem, type, callback) {
 
 
 
-/**
- * toggle navbar
- */
+/**-------------
+ # toggle navbar
+----------------*/
 
 const navbar = document.querySelector("[data-navbar]");
 const navbarLinks = document.querySelectorAll("[data-nav-link]");
@@ -50,9 +50,9 @@ addEventOnelem(navbarLinks, "click", closeNavbar);
 
 
 
-/**
- * header active on scroll down to 100px
- */
+/**-------------------------------------
+ # header active on scroll down to 100px
+----------------------------------------*/
 
 const header = document.querySelector("[data-header]");
 
@@ -68,9 +68,9 @@ addEventOnelem(window, "scroll", activeHeader);
 
 
 
-/**
- * filter tab
- */
+/**----------
+ # filter tab
+-------------*/
 
 const tabCard = document.querySelectorAll("[data-tab-card]");
 
