@@ -1,4 +1,4 @@
-/*
+/*/*
         - #FAIYAZ NAMRA----------FAIYAZ NAMRA----------FAIYAZ NAMRA
         - #FAIYAZ NAMRA----------FAIYAZ NAMRA----------FAIYAZ NAMRA
         - #FAIYAZ NAMRA----------FAIYAZ NAMRA----------FAIYAZ NAMRA
@@ -90,3 +90,4 @@ addEventOnelem(tabCard, "click", navigateTab);
         - #FAIYAZ NAMRA----------FAIYAZ NAMRA----------FAIYAZ NAMRA
         - #-----END-------------------END-------------------END
       -*/
+*/
