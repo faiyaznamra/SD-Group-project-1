@@ -68,21 +68,20 @@ addEventOnelem(window, "scroll", activeHeader);
 
 
 
+
 /**----------
  # filter tab
 -------------*/
 
-const tabCard = document.querySelectorAll("[data-tab-card]");
+const tabCards = document.querySelectorAll("[data-tab-card]");
 
-let lastTabCard = tabCard[0];
+tabCards.forEach(card => {
+  card.addEventListener("click", () => {
+    tabCards.forEach(c => c.classList.remove("active"));
+    card.classList.add("active");
+  });
+});
 
-const navigateTab = function () {
-  lastTabCard.classList.remove("active");
-  this.classList.add("active");
-  lastTabCard = this;
-}
-
-addEventOnelem(tabCard, "click", navigateTab);
 
 /*
         - #FAIYAZ NAMRA----------FAIYAZ NAMRA----------FAIYAZ NAMRA
